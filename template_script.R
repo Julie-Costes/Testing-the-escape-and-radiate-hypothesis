@@ -61,7 +61,6 @@ test_tree <- read.tree("~/Documents/STAGE/Data/nymphalini_data/tree_chazot_nymph
 
 ## Max age:
 max(node.depth.edgelength(new_tree_B))
-# 28.01527
 
 
 
@@ -74,7 +73,6 @@ max(node.depth.edgelength(new_tree_B))
 network <- read.table("~/Documents/STAGE/Data/nymphalini_data/intermediate_data/network_Nymphaliny_plants.csv", sep=";", header=TRUE)
 network[network == 1] <- 0
 network[network == 2] <- 1
-# network[network>0] <- 1
 
 # Check if all the names in the table are present in the tree:
 all(rownames(network) %in% new_tree_B$tip.label)
@@ -306,11 +304,6 @@ all(colnames(network_all) %in% new_tree_angiosperm$tip.label)
 
 # Save the new tree:
 # write.tree(new_tree_angiosperm, file = "~/Documents/STAGE/Data/nymphalini_data/tree_angiosperm_families.tre")
-
-
-# scp -r /mnt/c/Users/julie/Documents/M2/STAGE/Data/nymphalini_data/tree* jcostes@genobioinfo.toulouse.inrae.fr:/home/jcostes/work/nymphalini/nymphalini_data/
-# scp -r /mnt/c/Users/julie/Documents/M2/STAGE/Data/nymphalini_data/network_nymphalini_plants.csv jcostes@genobioinfo.toulouse.inrae.fr:/home/jcostes/work/nymphalini/nymphalini_data/
-# scp -r /Users/bperez/Documents/STAGE/Data/nymphalini_data/network_nymphalini_all.csv jcostes@genobioinfo.toulouse.inrae.fr:/home/jcostes/work/nymphalini/nymphalini_data/
 
 
 
@@ -1174,10 +1167,6 @@ for (name_original in names_tests) {
 #### STEP 4 - ANALYZE THE RESULTS ####
 
 #### directly on the computer
-
-
-# scp jcostes@genobioinfo.toulouse.inrae.fr:/home/jcostes/work/nymphalini/ELEFANT/list_rates_ancestral_interactions_*csv /mnt/c/Users/julie/Documents/M2/STAGE/Results/Nymphalini/ELEFANT/
-# scp jcostes@genobioinfo.toulouse.inrae.fr:/home/jcostes/work/nymphalini/BDD/plot* /mnt/c/Users/julie/Documents/M2/STAGE/Results/Nymphalini/BDD/
 
 
 rm(list=ls())
